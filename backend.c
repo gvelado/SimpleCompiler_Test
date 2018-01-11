@@ -35,12 +35,10 @@ static void Gen_Iterprete(Expresion *expr) {
 	    	switch (expr->oper) {
         		case '+':
         			res = expr->izquierda->valor + expr->derecha->valor; 
-          			printf("Expresión: (%d + %d)", expr->izquierda, expr->derecha);
           			printf("Resultado: %d\n", res);
           		break;
         		case '-':
         			res = expr->izquierda->valor * expr->derecha->valor;
-        			printf("Expresión: (%d * %d)", expr->izquierda, expr->derecha);
           			printf("Resultado: %d\n", res);
           		break;
       		}
@@ -53,5 +51,5 @@ static void Gen_Iterprete(Expresion *expr) {
 void Procesar(nodo_AST *codigoi){
   	//Gen_codigo_expresion(codigoi);
   	Gen_Iterprete(codigoi);
-  	printf("PRINT\n");
+  	//printf("PRINT\n");
 }
